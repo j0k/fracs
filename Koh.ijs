@@ -6,8 +6,8 @@ cos=:2&o.
 rfd=: 180 %~ o.			NB.rad <- degree
 ] pi =: rfd 180
 ] phi60 =: pi%3
-rotx =: ( {. * cos@[ ) - ({: * sin@[ )
-roty =: ( {. * sin@[ ) + ({: * cos@[ )
+rotx =: ( {.@] * cos@[ ) - ({:@] * sin@[ )
+roty =: ( {.@] * sin@[ ) + ({:@] * cos@[ )
 
 ]'p0 p1'=:(0 0);(100 100)		
 
@@ -23,8 +23,8 @@ repeat =: ((2:[\ ])@: funca @:(_2:[\ ])@:, "2)
 
 present =: 3 : 0
 	res =. _2[\, y
-	d   =. 0 { $ res
-	f   =. 0 { res
+	d   =. # res
+	f   =. {. res
 	f, (2|i. d) # res
 )
 
