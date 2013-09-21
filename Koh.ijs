@@ -1,4 +1,5 @@
 NB. Koh snowflake
+NB. I'm still a J`newbie so on...
 
 NB. 1 - sin, 2 - cos
 sin=:1&o.
